@@ -1,8 +1,19 @@
 
-
+x = ("                          --------+")
 
 print("\nWelkom bij Papi Gelato.\n")
 
+def bon():
+    print("\n----------[Papi Gelato]----------\n")
+    print("Bolletjes   ",hvl," x €1,10   = €",1.10*hvl)
+    if houder == "hoorntje":
+        print("Hoorntjes    1 x €1,25    = € 1,25  ")
+        print(x)
+        print("Totaal                    = €",(hvl*1.10)+1,25)
+    if houder == "bakje":
+        print("Bakjes       1 x €0,75    = € 0,75  ")
+        print(x)
+        print("Totaal                    = €",(hvl*1.10)+0.75)
 
 
 def stap_1():
@@ -30,10 +41,13 @@ def smaak_keuze():
     
 
 def stap_2():
+    global houder
     houder = input("Wilt u deze " + str(hvl) +  " bolletje(s) in A) een hoorntje of B) een bakje? ")
     if houder == "A":
+        houder = "hoorntje"
         stap_3("hoorntje")
     elif houder == "B":
+        houder = "bakje"
         stap_3("bakje")
     else:
         print("Sorry dat snap ik niet...")
@@ -44,7 +58,8 @@ def stap_3(houder):
     if nogmaals.lower().strip() == "ja":
         stap_1()
     elif nogmaals.lower().strip() == "nee":
-        print("Bedankt en tot ziens!")
+        bon()
+        print("\nBedankt en tot ziens!")
     else:
         print("Sorry dat snap ik niet...")
 
