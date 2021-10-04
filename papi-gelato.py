@@ -1,7 +1,7 @@
 
 
 
-print("\nWelkom bij Papi Gelato je mag alle smaken kiezen zolang het maar vanille ijs is.\n")
+print("\nWelkom bij Papi Gelato.\n")
 
 
 
