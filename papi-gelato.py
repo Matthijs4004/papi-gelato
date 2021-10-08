@@ -16,6 +16,8 @@ def bon():
         print("Totaal                    = €",(hvl*1.10)+0.75)
 
 
+
+
 def stap_1():
     global hvl
     hvl = int(input("Hoeveel bolletjes wilt u? "))
